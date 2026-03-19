@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import AppMockup from "@/components/AppMockup";
+import AppScreens from "@/components/AppScreens";
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -88,6 +89,8 @@ export default function Home() {
           <span className="text-lg">↓</span>
         </div>
       </section>
+
+      <AppScreens />
 
       {/* ── Example Insight ── */}
       <section className="px-6 py-24 bg-[#0e0f11]">
