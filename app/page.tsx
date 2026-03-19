@@ -55,7 +55,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg sm:text-xl text-white/60 leading-relaxed mb-10 max-w-xl mx-auto">
-            Connect your Apple Watch and our AI automatically surfaces what&apos;s driving your flares — sleep, stress, activity, and more. No journals. No guessing. Just answers.
+            AI analyzes your Apple Health data and shows exactly what&apos;s causing your flares.
           </p>
 
           <div className="flex flex-col items-center gap-3">
@@ -63,7 +63,7 @@ export default function Home() {
               href="#waitlist"
               className="inline-block bg-emerald-500 hover:bg-emerald-400 text-white font-semibold text-base sm:text-lg px-8 py-4 rounded-full transition-all hover:shadow-[0_0_32px_rgba(52,211,153,0.35)] active:scale-95"
             >
-              Join the Waitlist — Free Early Access
+              Get Early Access
             </a>
             <p className="text-sm text-white/40">
               🎁 First 10 to join: get a free personal pattern report based on 2 weeks of your Apple Health data.
@@ -252,7 +252,7 @@ export default function Home() {
                 disabled={status === "loading"}
                 className="w-full bg-emerald-500 hover:bg-emerald-400 disabled:opacity-50 text-white font-semibold text-base py-4 rounded-full transition-all hover:shadow-[0_0_24px_rgba(52,211,153,0.3)] active:scale-[0.99]"
               >
-                {status === "loading" ? "Joining…" : "Join the Waitlist — Free Early Access"}
+                {status === "loading" ? "Joining…" : "Get Early Access"}
               </button>
 
               <p className="text-center text-xs text-white/25 pt-1">
