@@ -134,7 +134,7 @@ export default function Home() {
             "Built for people who are tired of guessing.",
           ].map((line, i) => (
             <div key={i} className="flex items-start gap-4">
-              <span className="mt-1 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-emerald-400/60 mt-[9px]" />
+              <span className="mt-[9px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-emerald-400/60" />
               <p className="text-white/50 text-base sm:text-lg leading-relaxed">{line}</p>
             </div>
           ))}
