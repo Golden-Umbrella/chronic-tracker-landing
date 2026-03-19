@@ -49,7 +49,7 @@ function DashboardScreen() {
 
       <div className="space-y-2">
         {stats.map((s, i) => (
-          <div key={s.label} className="bg-white/[0.04] border border-white/8 rounded-xl p-2.5 flex items-center gap-3">
+          <div key={s.label} className="bg-white/[0.04] border border-white/[0.08] rounded-xl p-2.5 flex items-center gap-3">
             <div className="flex-1">
               <p className="text-[8px] text-white/30 uppercase tracking-wide">{s.label}</p>
               <p className="text-sm font-bold text-white leading-tight">
@@ -80,7 +80,7 @@ function DashboardScreen() {
       </div>
 
       {/* Weekly bar chart */}
-      <div className="mt-3 bg-white/[0.03] border border-white/8 rounded-xl p-2.5">
+      <div className="mt-3 bg-white/[0.03] border border-white/[0.08] rounded-xl p-2.5">
         <p className="text-[8px] text-white/30 uppercase tracking-wide mb-2">Symptom severity — 7 days</p>
         <div className="flex items-end gap-1 h-10">
           {[60, 35, 80, 40, 75, 30, 45].map((h, i) => (
@@ -126,8 +126,8 @@ function InsightScreen() {
       </div>
 
       {/* Chart: sleep hours vs energy */}
-      <div className="bg-white/[0.03] border border-white/8 rounded-xl p-2.5">
-        <p className="text-[8px] text-white/30 uppercase tracking-wide mb-2">Energy level by sleep duration</p>
+      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-2.5">
+        <p className="text-[8px] text-white/30 uppercase tracking-wide mb-2">Energy level per night — grouped by sleep duration</p>
         <div className="flex items-end gap-0.5 h-12">
           {bars.map((h, i) => (
             <div key={i} className="flex-1 flex flex-col items-center gap-0.5">
@@ -145,11 +145,11 @@ function InsightScreen() {
         <div className="flex items-center gap-3 mt-2">
           <div className="flex items-center gap-1">
             <div className="w-2 h-1.5 rounded-sm bg-red-400/60" />
-            <span className="text-[7px] text-white/30">Low sleep</span>
+            <span className="text-[7px] text-white/30">Low energy outcome</span>
           </div>
           <div className="flex items-center gap-1">
             <div className="w-2 h-1.5 rounded-sm bg-emerald-400/55" />
-            <span className="text-[7px] text-white/30">Good sleep</span>
+            <span className="text-[7px] text-white/30">High energy outcome</span>
           </div>
         </div>
       </div>
@@ -185,7 +185,7 @@ function CorrelationScreen() {
         <span className="text-[8px] text-emerald-400 bg-emerald-400/10 px-1.5 py-0.5 rounded-full">−0.82 r</span>
       </div>
 
-      <div className="bg-white/[0.03] border border-white/8 rounded-xl p-2.5">
+      <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-2.5">
         <svg viewBox="0 0 100 100" className="w-full h-28">
           {/* Grid */}
           {[25, 50, 75].map(x => (
@@ -241,14 +241,14 @@ function WeeklyReportScreen() {
           <p className="text-[8px] text-red-400 uppercase tracking-wide mb-0.5">Hardest day</p>
           <p className="text-[10px] text-white font-medium">Monday — 5.2h sleep · Fatigue score 8/10</p>
         </div>
-        <div className="bg-white/[0.04] border border-white/8 rounded-xl p-2.5">
+        <div className="bg-white/[0.04] border border-white/[0.08] rounded-xl p-2.5">
           <p className="text-[8px] text-white/30 uppercase tracking-wide mb-1">Top insight this week</p>
           <p className="text-[10px] text-white/75 leading-relaxed">
             Sleep under 6h preceded{" "}
             <span className="text-red-400 font-semibold">4 of 5</span> high-symptom days.
           </p>
         </div>
-        <div className="bg-white/[0.03] border border-white/8 rounded-xl p-2 flex items-center justify-between">
+        <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-2 flex items-center justify-between">
           <p className="text-[8px] text-white/30">Avg HRV this week</p>
           <div className="flex items-center gap-1">
             <span className="text-[10px] font-bold text-white">54ms</span>
