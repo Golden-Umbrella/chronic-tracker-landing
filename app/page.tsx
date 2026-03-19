@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import AppMockup from "@/components/AppMockup";
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -43,32 +44,42 @@ export default function Home() {
           }}
         />
 
-        <div className="relative z-10 max-w-2xl w-full">
-          <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-8 text-xs font-medium text-emerald-400 tracking-wide uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Waitlist open
-          </div>
+        <div className="relative z-10 w-full max-w-5xl flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
-          <h1 className="text-4xl sm:text-6xl font-bold leading-[1.1] tracking-tight mb-6 text-white">
-            Your symptoms have<br />
-            <span className="text-emerald-400">patterns.</span> We find them.
-          </h1>
+          {/* Left — copy */}
+          <div className="flex-1 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-8 text-xs font-medium text-emerald-400 tracking-wide uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              Waitlist open
+            </div>
 
-          <p className="text-lg sm:text-xl text-white/60 leading-relaxed mb-10 max-w-xl mx-auto">
-            AI analyzes your Apple Health data and shows exactly what&apos;s causing your flares.
-          </p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6 text-white">
+              Your symptoms have<br />
+              <span className="text-emerald-400">patterns.</span> We find them.
+            </h1>
 
-          <div className="flex flex-col items-center gap-3">
-            <a
-              href="#waitlist"
-              className="inline-block bg-emerald-500 hover:bg-emerald-400 text-white font-semibold text-base sm:text-lg px-8 py-4 rounded-full transition-all hover:shadow-[0_0_32px_rgba(52,211,153,0.35)] active:scale-95"
-            >
-              Get Early Access
-            </a>
-            <p className="text-sm text-white/40">
-              🎁 First 10 to join: get a free personal pattern report based on 2 weeks of your Apple Health data.
+            <p className="text-lg sm:text-xl text-white/60 leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0">
+              AI analyzes your Apple Health data and shows exactly what&apos;s causing your flares.
             </p>
+
+            <div className="flex flex-col items-center lg:items-start gap-3">
+              <a
+                href="#waitlist"
+                className="inline-block bg-emerald-500 hover:bg-emerald-400 text-white font-semibold text-base sm:text-lg px-8 py-4 rounded-full transition-all hover:shadow-[0_0_32px_rgba(52,211,153,0.35)] active:scale-95"
+              >
+                Get Early Access
+              </a>
+              <p className="text-sm text-white/40">
+                🎁 First 10 to join: free personal pattern report from your Apple Health data.
+              </p>
+            </div>
           </div>
+
+          {/* Right — app mockup */}
+          <div className="flex-shrink-0 w-full max-w-[260px] lg:max-w-[280px]">
+            <AppMockup />
+          </div>
+
         </div>
 
         {/* Scroll hint */}
