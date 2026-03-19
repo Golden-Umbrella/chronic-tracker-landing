@@ -54,12 +54,12 @@ export default function Home() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6 text-white">
-              Your symptoms have<br />
-              <span className="text-emerald-400">patterns.</span> We find them.
+              Your Apple Watch tracks everything.<br />
+              <span className="text-emerald-400">But it still can&apos;t tell you why.</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-white/60 leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0">
-              AI analyzes your Apple Health data and shows exactly what&apos;s causing your flares.
+              Finally understand your health — see what&apos;s actually affecting your energy, sleep, and symptoms.
             </p>
 
             <div className="flex flex-col items-center lg:items-start gap-3">
@@ -122,6 +122,22 @@ export default function Home() {
           <p className="text-center text-white/30 text-sm mt-5">
             These are the patterns your doctor doesn&apos;t have time to find.
           </p>
+        </div>
+      </section>
+
+      {/* ── Supporting context ── */}
+      <section className="px-6 py-16 bg-[#0e0f11]">
+        <div className="max-w-2xl mx-auto space-y-6">
+          {[
+            "Most Apple Health users have months of data and no idea what it means.",
+            "We connect the dots — surfacing the patterns between your sleep, activity, HRV, and how you actually feel.",
+            "Built for people who are tired of guessing.",
+          ].map((line, i) => (
+            <div key={i} className="flex items-start gap-4">
+              <span className="mt-1 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-emerald-400/60 mt-[9px]" />
+              <p className="text-white/50 text-base sm:text-lg leading-relaxed">{line}</p>
+            </div>
+          ))}
         </div>
       </section>
 
