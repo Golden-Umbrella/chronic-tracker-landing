@@ -77,6 +77,12 @@ export default function AppMockup() {
               </div>
               {/* HRV sparkline */}
               <svg viewBox="0 0 100 24" className="w-full h-5" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="app-mockup-hrv-gradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="rgba(52,211,153,0.15)" />
+                    <stop offset="100%" stopColor="rgba(52,211,153,0)" />
+                  </linearGradient>
+                </defs>
                 <polyline
                   points="0,18 14,12 28,16 42,8 56,14 70,6 84,10 100,4"
                   fill="none"
@@ -87,15 +93,9 @@ export default function AppMockup() {
                 />
                 <polyline
                   points="0,18 14,12 28,16 42,8 56,14 70,6 84,10 100,4 100,24 0,24"
-                  fill="url(#g)"
+                  fill="url(#app-mockup-hrv-gradient)"
                   stroke="none"
                 />
-                <defs>
-                  <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="rgba(52,211,153,0.15)" />
-                    <stop offset="100%" stopColor="rgba(52,211,153,0)" />
-                  </linearGradient>
-                </defs>
               </svg>
             </div>
 
