@@ -9,8 +9,10 @@ const supabase = createClient(
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
-const FROM_EMAIL = "waitlist@updates.chronictracker.app";
-const REPLY_TO = "hello@chronictracker.app";
+// TODO: Replace with verified custom domain once DNS is configured in Resend.
+// Add updates.chronictracker.app at resend.com/domains and update these.
+const FROM_EMAIL = "Chronic Tracker <onboarding@resend.dev>";
+const REPLY_TO = "onboarding@resend.dev";
 
 export async function POST(req: NextRequest) {
   const { name, email, condition } = await req.json();
